@@ -64,7 +64,7 @@ body.addEventListener('click', event => {
 
         //замена текста кнопки
 
-        btnNext.innerHTML = "Следующий вопрос"
+        btnNext.innerHTML = "Дальше"
 
         //сброс цвета ответов
 
@@ -176,8 +176,8 @@ body.addEventListener('click', event => {
                 })
 
                 if (JSON.parse(xhttp.responseText).length === i + 1 ) {
-                    btnNext.innerHTML = "Узнать результаты";
-                    modalNext.innerHTML = "Узнать результаты";
+                    btnNext.innerHTML = "Результаты";
+                    modalNext.innerHTML = "Результаты";
                 }
 
                 if (i === 4) {

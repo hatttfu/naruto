@@ -259,14 +259,24 @@ a {
     }
 }
 
-@media (max-width: 394px) {
+@media (max-width: 415px) {
+    #body {
+        height: 100vh;
+        overflow: hidden;
+    }
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
     button, a {
         width: 250px;
-        height: 50px;
+        height: 40px;
 
         font-size: 1.6rem;
     }
+}
 
+@media (max-width: 394px) {
     .btn-next, .modal-next {
         font-size: 1.4rem;
     }
