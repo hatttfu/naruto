@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1",
+        "title": "кто является первым учителем Наруто?",
+        "answers": [
+            {
+                "text": "ответ1",
+                "isCorrect": true
+            },
+            {
+                "text": "ответ2",
+                "isCorrect": false
+            },
+            {
+                "text": "ответ3",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "кто был вторым Хокаге?",
+        "answers": [
+            {
+                "text": "Хаширама",
+                "isCorrect": false
+            },
+            {
+                "text": "Минато",
+                "isCorrect": false
+            },
+            {
+                "text": "Тобирама",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "кто является первым учителем Наруто?",
+        "answers": [
+            {
+                "text": "ответ1",
+                "isCorrect": true
+            },
+            {
+                "text": "ответ2",
+                "isCorrect": false
+            },
+            {
+                "text": "ответ3",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "кто был втором Хокаге?",
+        "answers": [
+            {
+                "text": "Хаширама",
+                "isCorrect": false
+            },
+            {
+                "text": "Минато",
+                "isCorrect": false
+            },
+            {
+                "text": "Тобирама",
+                "isCorrect": true
+            }
+        ]
+    }
+]

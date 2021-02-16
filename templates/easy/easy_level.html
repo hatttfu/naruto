@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Наруто Тест. Легкий уровень</title>
+    <link rel="icon" href="../../images/naruto-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="../../css/reset.css"> 
+    <link rel="stylesheet" media="all" href="../../css/animate.css">
+</head>
+<body id="body">
+    <div class="container">
+        <div class="pictures left">
+            <div class="picture">
+                <img src="../../images/1.png" alt="">
+            </div>
+            <div class="picture">
+                <img src="../../images/2.png" alt="">
+            </div>
+            <div class="picture">
+                <img src="../../images/3.png" alt="">
+            </div>
+            <div class="picture">
+                <img src="../../images/4.png" alt="">
+            </div>
+        </div>
+        
+        <main class="main">
+           
+                
+                <div class="main__container">
+                    <div id="id" class="number fadeIn wow">
+                        1
+                    </div>
+                    <div class="info">
+                        <div id="title" class="title fadeIn wow">
+                            кто является первым учителем Наруто?
+                        </div>
+                        <div class="options">
+                            <button id="first" class="answer fadeIn wow">Дзирайя</button>
+                            <button id="second" class="answer fadeIn wow">Какаси</button>
+                            <button id="third" class="answer fadeIn wow">Ирука</button>
+                            
+                        </div>
+                        <button class="btn-next">Начать тест!</button>
+                        
+                    </div>
+                </div>
+
+                <div class="results">
+                    <div class="points"></div>
+                    <div class="congrats">ты был супер!</div>
+                    <a href="../../index.html">На главную</a>
+                    <a href="">Попробовать еще раз</a>
+                </div>  
+                
+                <div class="modal hidden">
+
+                    <h3 class="note"></h3>
+
+                    <img class="reaction" src="../../gifs/1.gif" alt="">
+
+                    <button class="modal-next">Следующий вопрос</button>
+
+                </div>
+                
+        </main>
+   
+        <div class="pictures right">
+            <div>
+                <img src="../../images/5.png" alt="">
+            </div>
+            <div>
+                <img src="../../images/6.png" alt="">
+            </div>
+            <div>
+                <img src="../../images/7.png" alt="">
+            </div>
+            <div>
+                <img src="../../images/8.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="../../js/wow.min.js"></script>
+    
+    <!-- <script src="../../questions.json"></script> -->
+    <script src="script.js"></script>
+    <script>new WOW().init();</script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+/* roboto-slab-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/roboto-slab-v12-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/roboto-slab-v12-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-regular.svg#RobotoSlab') format('svg'); /* Legacy iOS */
+  }
+
+  /* roboto-slab-600 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/roboto-slab-v12-latin_cyrillic-600.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/roboto-slab-v12-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-600.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/roboto-slab-v12-latin_cyrillic-600.svg#RobotoSlab') format('svg'); /* Legacy iOS */
+  }
+
+body {
+    overflow-x: hidden;
+    
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+   
+    width: 100vw;
+
+    display: flex;
+
+
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Roboto Slab';
+    -webkit-text-stroke: 1.7px #000000; /* свойство text-stroke наследуется, применяется ко всем элементам, изменяет текст */
+}
+
+.pictures {
+    max-width: 292px;
+}
+
+.pictures img {
+    vertical-align: middle;
+
+    height: auto;
+    width: 100%;
+    /* еще больше контроля с max-width */
+    max-width: 292px;
+}
+
+
+.main {
+    background-image: url('../../images/easy_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    width: calc(100vw - 584px);
+    position: relative;
+
+    min-height: 100vh;
+}
+
+.main__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.number {
+    font-size: 2rem;
+    border: 3px solid #FFFFFF;
+    margin-right: 3rem;
+    margin-top: .5rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    width: 50px;
+    /* height: 50px; */
+}
+
+.title {
+    max-width: 30rem;
+}
+
+.info, .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.title, .options button {
+    margin-bottom: 5rem;
+}
+
+.answer {
+    padding-left: 1.5rem;
+}
+
+button, a {
+    width: 342px;
+    height: 50px;
+
+    background: transparent;
+    color: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    text-align: left;
+    /* padding-left: 1rem; */
+    font-size: 30px;
+
+    border: 3px solid #FFFFFF;
+    border-radius: 50px;
+}
+
+.btn-next {
+    /* background-color: #a19480; */
+    /* font-size: 20px; */
+    text-align: center;
+    
+}
+
+.btn-next:active {
+    border: none;
+}
+
+button:hover {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.8);
+}
+
+.results {
+    text-align: center;
+}
+
+.results a {
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.number, .title, .answer, .results {
+    display: none;
+}
+
+a {
+    width: 242px;
+    height: 50px;
+
+    text-align: center;
+
+    display: block;
+}
+
+/* modal */ 
+
+.modal {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+    width: 350px;
+    
+    /* background-color: #2ecc71; */
+    /* background-color: #2c3e50; */
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.8);
+    
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal button {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.lock {
+    background: #000;
+    opacity: 0.75;
+}
+
+.hidden {
+    display: none;
+}
+
+.note {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 912px) {
+    .main__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .number {
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+    .options  {
+        
+        align-self: center;
+    }
+    .btn-next {
+        margin: 0 auto;
+
+    }
+}
+
+@media (max-width: 1138px) {
+    .right {
+        display: none;
+    }
+    .main {
+        width: calc(100vw - 292px);
+    }
+}
+
+@media (max-width: 660px) {
+    .pictures{
+        display: none;
+    }
+    .main {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 418px) {
+    .modal {
+       
+        width: 95vw;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+@media (max-width: 394px) {
+    button, a {
+        width: 250px;
+        height: 50px;
+
+        font-size: 1.6rem;
+    }
+
+    .btn-next, .modal-next {
+        font-size: 1.4rem;
+    }
+}
