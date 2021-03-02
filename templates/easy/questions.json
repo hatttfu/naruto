@@ -1,37 +1,37 @@
 [
     {
         "id": "1",
-        "title": "кто является первым учителем Наруто?",
+        "title": "любимое блюда Наруто?",
         "answers": [
             {
-                "text": "ответ1",
+                "text": "Рамен",
                 "isCorrect": true
             },
             {
-                "text": "ответ2",
+                "text": "Карри",
                 "isCorrect": false
             },
             {
-                "text": "ответ3",
+                "text": "Суши",
                 "isCorrect": false
             }
         ]
     },
     {
         "id": "2",
-        "title": "кто был вторым Хокаге?",
+        "title": "как зовут королеву улиток?",
         "answers": [
             {
-                "text": "Хаширама",
+                "text": "Канкуро",
                 "isCorrect": false
             },
             {
-                "text": "Минато",
-                "isCorrect": false
-            },
-            {
-                "text": "Тобирама",
+                "text": "Кацую",
                 "isCorrect": true
+            },
+            {
+                "text": "Шиккоцу",
+                "isCorrect": false
             }
         ]
     },
@@ -40,16 +40,16 @@
         "title": "кто является первым учителем Наруто?",
         "answers": [
             {
-                "text": "ответ1",
+                "text": "Дзирайя",
+                "isCorrect": false
+            },
+            {
+                "text": "Какаси",
+                "isCorrect": false
+            },
+            {
+                "text": "Ирука",
                 "isCorrect": true
-            },
-            {
-                "text": "ответ2",
-                "isCorrect": false
-            },
-            {
-                "text": "ответ3",
-                "isCorrect": false
             }
         ]
     },
@@ -68,6 +68,123 @@
             {
                 "text": "Тобирама",
                 "isCorrect": true
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "title": "чей это глаз?",
+        "picture": "../../img/pictures/eye.png",
+        "answers": [
+            {
+                "text": "Саске",
+                "isCorrect": false
+            },
+            {
+                "text": "Сая",
+                "isCorrect": false
+            },
+            {
+                "text": "Гаары",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "title": "кто это?",
+        "answers": [
+            {
+                "text": "Хаширама",
+                "isCorrect": false
+            },
+            {
+                "text": "Минато",
+                "isCorrect": false
+            },
+            {
+                "text": "Тобирама",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "title": "кто спрятан на картинке?",
+        "picture": "../../img/pictures/secret.png",
+        "answerImg": "../../img/answers/answer7.png",
+        "answers": [
+            {
+                "text": "Итачи",
+                "isCorrect": false
+            },
+            {
+                "text": "Забуза",
+                "isCorrect": true
+            },
+            {
+                "text": "Пейн",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "title": "что скрывается за звездочкой?",
+        "picture": "../../img/pictures/star.png",
+        "answerImg": "../../img/answers/star.png",
+        "answers": [
+            {
+                "text": "Свинка",
+                "isCorrect": true
+            },
+            {
+                "text": "Собака",
+                "isCorrect": false
+            },
+            {
+                "text": "Книга",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "title": "кто закрыт на фото?",
+        "picture": "../../img/pictures/hidden.png",
+        "answerImg": "../../img/answers/hidden.png",
+        "answers": [
+            {
+                "text": "Дейдара",
+                "isCorrect": false
+            },
+            {
+                "text": "Пейн",
+                "isCorrect": true
+            },
+            {
+                "text": "Тоби",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "title": "какой знак закрыт на фото?",
+        "picture": "../../img/pictures/hidden.png",
+        "answerImg": "../../img/answers/hidden.png",
+        "answers": [
+            {
+                "text": "Деревни Скрытого Облака",
+                "isCorrect": false
+            },
+            {
+                "text": "Деревни Скрытого Водопада",
+                "isCorrect": true
+            },
+            {
+                "text": "Деревни Скрытого Тумана",
+                "isCorrect": false
             }
         ]
     }

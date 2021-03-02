@@ -2,12 +2,14 @@ const btnNext = document.querySelector('.btn-next'),
       modalNext = document.querySelector('.modal-next'),
       answers = document.querySelectorAll('.answer'),
       title = document.querySelector('.title'),
+      picture = document.querySelector('.info-img'),
       number = document.querySelector('.number'),
       results = document.querySelector('.results'),
       pointsBlock = document.querySelector('.points'),
       modal = document.querySelector('.modal'),
       body = document.getElementById('body'),
       reactionImg = document.querySelector('.reaction'),
+      introText = document.querySelector('.intro-text'),
       noteText = document.querySelector('.note');
 
 
@@ -21,6 +23,7 @@ function gifsCorrect() {
     body.classList.add('lock');
     modal.classList.remove('hidden');
     modal.style.backgroundColor = "#2ecc71";
+    
     reactionImg.src = "../../gifs/correct.gif";
     noteText.innerHTML = "Верно!"
 
@@ -51,6 +54,7 @@ body.addEventListener('click', event => {
         console.log(points);
         body.classList.remove('lock');
         modal.classList.add('hidden');
+        introText.classList.add('hidden');
         i++;
 
         //display block elements
@@ -64,6 +68,7 @@ body.addEventListener('click', event => {
 
         //замена текста кнопки
 
+        btnNext.classList.remove('center');
         btnNext.innerHTML = "Дальше"
 
         //сброс цвета ответов
@@ -78,6 +83,10 @@ body.addEventListener('click', event => {
         document.getElementById("second").style.pointerEvents = "auto";  
         document.getElementById("third").style.pointerEvents = "auto";  
 
+        //исчезновение картинки
+
+        picture.classList.add('hidden');
+
         //запрос json
 
         let xhttp = new XMLHttpRequest();
@@ -85,6 +94,18 @@ body.addEventListener('click', event => {
             if (this.readyState == 4 && this.status == 200) {
             // Typical action to be performed when the document is ready:
                 if (JSON.parse(xhttp.responseText).length > i) {
+
+                    if (typeof JSON.parse(xhttp.responseText)[i].picture !== 'undefined') {
+                        //picture
+                        picture.classList.remove('hidden');
+                        picture.src = JSON.parse(xhttp.responseText)[i].picture;
+                    }
+
+                    if (typeof JSON.parse(xhttp.responseText)[i].answerImg !== 'undefined') {
+                        //amswerImg
+                        reactionImg.src = JSON.parse(xhttp.responseText)[i].answerImg; 
+                    }
+
                     //number
                     document.getElementById("id").innerHTML = JSON.parse(xhttp.responseText)[i].id;
 
@@ -176,12 +197,13 @@ body.addEventListener('click', event => {
                 })
 
                 if (JSON.parse(xhttp.responseText).length === i + 1 ) {
+                
                     btnNext.innerHTML = "Результаты";
                     modalNext.innerHTML = "Результаты";
                 }
 
-                if (i === 4) {
-                    console.log('4')
+                if (i === JSON.parse(xhttp.responseText).length) {
+                    console.log('последний вопрос')
                     
                             results.style.display = "block";
 
@@ -194,12 +216,7 @@ body.addEventListener('click', event => {
                             });
 
                             console.log(points)
-                            pointsBlock.innerHTML = `Заработано очков: ${points}`
-
-                    //     }
-                    
-                    // })
-                    
+                            pointsBlock.innerHTML = `Заработано очков: ${points}`                    
                 }
                         
             }

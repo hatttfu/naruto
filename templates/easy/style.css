@@ -42,12 +42,8 @@ a {
 
 
 .container {
-   
     width: 100vw;
-
     display: flex;
-
-
     font-size: 36px;
     font-weight: 600;
     color: #fff;
@@ -114,20 +110,23 @@ a {
     margin-bottom: 5rem;
 }
 
+.info-img {
+    margin-bottom: 5rem;
+}
+
 .answer {
     padding-left: 1.5rem;
 }
 
 button, a {
     width: 342px;
-    height: 50px;
+    min-height: 50px;
 
     background: transparent;
     color: inherit;
     font-weight: inherit;
     font-family: inherit;
     text-align: left;
-    /* padding-left: 1rem; */
     font-size: 30px;
 
     border: 3px solid #FFFFFF;
@@ -138,7 +137,10 @@ button, a {
     /* background-color: #a19480; */
     /* font-size: 20px; */
     text-align: center;
-    
+}
+
+.center {
+    margin: 0 auto;
 }
 
 .btn-next:active {
@@ -210,6 +212,13 @@ a {
 
 .note {
     margin-bottom: 2rem;
+}
+
+.intro-text {
+    padding: 2rem 5rem;
+    font-size: 26px;
+    text-align: center;
+    line-height: 1.2em;
 }
 
 @media (max-width: 912px) {
