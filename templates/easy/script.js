@@ -69,7 +69,8 @@ body.addEventListener('click', event => {
         //замена текста кнопки
 
         btnNext.classList.remove('center');
-        btnNext.innerHTML = "Дальше"
+        btnNext.innerHTML = "Дальше";
+        btnNext.classList.add('hidden');
 
         //сброс цвета ответов
 
