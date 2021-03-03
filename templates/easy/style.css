@@ -270,7 +270,7 @@ a {
 
 @media (max-width: 415px) {
     #body {
-        height: 100vh;
+        min-height: 100vh;
         overflow: hidden;
     }
     .title {
