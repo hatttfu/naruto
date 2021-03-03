@@ -93,6 +93,8 @@
     {
         "id": "6",
         "title": "кто это?",
+        "picture": "../../img/pictures/square.png",
+        "answerImg": "../../img/answers/square.png",
         "answers": [
             {
                 "text": "Хаширама",
@@ -171,19 +173,19 @@
     {
         "id": "10",
         "title": "какой знак закрыт на фото?",
-        "picture": "../../img/pictures/hidden.png",
-        "answerImg": "../../img/answers/hidden.png",
+        "picture": "../../img/pictures/who.png",
+        "answerImg": "../../img/answers/who.png",
         "answers": [
             {
-                "text": "Деревни Скрытого Облака",
+                "text": "Суйгецу",
                 "isCorrect": false
             },
             {
-                "text": "Деревни Скрытого Водопада",
+                "text": "Дейдара",
                 "isCorrect": true
             },
             {
-                "text": "Деревни Скрытого Тумана",
+                "text": "Какаши",
                 "isCorrect": false
             }
         ]
