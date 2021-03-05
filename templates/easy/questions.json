@@ -92,7 +92,7 @@
     },
     {
         "id": "6",
-        "title": "кто это?",
+        "title": "какой знак закрыт на фото?",
         "picture": "../../img/pictures/square.png",
         "answerImg": "../../img/answers/square.png",
         "answers": [
@@ -172,7 +172,7 @@
     },
     {
         "id": "10",
-        "title": "какой знак закрыт на фото?",
+        "title": "кто это?",
         "picture": "../../img/pictures/who.png",
         "answerImg": "../../img/answers/who.png",
         "answers": [

@@ -14,7 +14,6 @@ const btnNext = document.querySelector('.btn-next'),
 
 
 let i = -1;
-
 let points = 0;
 
 //gifs
@@ -25,9 +24,10 @@ function gifsCorrect() {
     modal.style.backgroundColor = "#2ecc71";
     
     reactionImg.src = "../../gifs/correct.gif";
-    noteText.innerHTML = "Верно!"
+    noteText.innerHTML = "Верно!";
 
-    modalClose();
+
+    // modalClose();
 }
 
 function gifsIncorrect() {
@@ -35,23 +35,26 @@ function gifsIncorrect() {
     modal.classList.remove('hidden');
     modal.style.backgroundColor = "#e74c3c";
     reactionImg.src = "../../gifs/incorrect.gif";
-    noteText.innerHTML = "Неверно!"
+    noteText.innerHTML = "Неверно!";
 
-    modalClose();
+    points = points + 1;
+    console.log(points);
+
+
+    // modalClose();
 }
 
-function modalClose() {
-    body.addEventListener('click', event => {
-        if (!event.target.closest('.modal')) {
-            body.classList.remove('lock');
-            modal.classList.add('hidden');
-        }
-    })
-}
+// function modalClose() {
+//     body.addEventListener('click', event => {
+//         if (!event.target.closest('.modal')) {
+//             body.classList.remove('lock');
+//             modal.classList.add('hidden');
+//         }
+//     })
+// }
 
 body.addEventListener('click', event => {
     if (event.target.closest('.btn-next') || event.target.closest('.modal-next')) {
-        console.log(points);
         body.classList.remove('lock');
         modal.classList.add('hidden');
         introText.classList.add('hidden');
@@ -134,7 +137,9 @@ body.addEventListener('click', event => {
                                     
                                 event.target.closest('.answer').style.backgroundColor = "green";
 
-                                points++;
+                                // points++;
+                                // console.log(points);
+
 
                                 gifsCorrect()
 
@@ -155,7 +160,8 @@ body.addEventListener('click', event => {
                                     
                                 event.target.closest('.answer').style.backgroundColor = "green";
 
-                                points++;
+                                // points++;
+                                // console.log(points);
 
                                 gifsCorrect()
 
@@ -176,7 +182,8 @@ body.addEventListener('click', event => {
                                     
                                 event.target.closest('.answer').style.backgroundColor = "green";
 
-                                points++;
+                                // points++;
+                                // console.log(points);
 
                                 gifsCorrect()
 
@@ -196,6 +203,17 @@ body.addEventListener('click', event => {
                     
                 
                 })
+
+                // document.body.addEventListener('click', event => { 
+
+                //     if (event.target.closest('.answer').style.backgroundColor == "green") {
+                //         points++;
+                //         console.log(points);
+                //     } 
+
+                // })
+
+                
 
                 if (JSON.parse(xhttp.responseText).length === i + 1 ) {
                 

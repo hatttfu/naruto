@@ -110,6 +110,10 @@ a {
     margin-bottom: 5rem;
 }
 
+.question__img {
+    text-align: center;
+}
+
 .info-img {
     margin-bottom: 5rem;
 }
@@ -269,10 +273,6 @@ a {
 }
 
 @media (max-width: 415px) {
-    #body {
-        min-height: 100vh;
-        overflow: hidden;
-    }
     .title {
         font-size: 1.6rem;
         margin-bottom: 2rem;
