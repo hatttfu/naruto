@@ -108,6 +108,9 @@ body.addEventListener('click', event => {
                     if (typeof JSON.parse(xhttp.responseText)[i].answerImg !== 'undefined') {
                         //amswerImg
                         reactionImg.src = JSON.parse(xhttp.responseText)[i].answerImg; 
+                        console.log(JSON.parse(xhttp.responseText)[i].answerImg);
+                        console.log(reactionImg);
+
                     }
 
                     //number
@@ -137,8 +140,8 @@ body.addEventListener('click', event => {
                                     
                                 event.target.closest('.answer').style.backgroundColor = "green";
 
-                                // points++;
-                                // console.log(points);
+                                points++;
+                                console.log(points);
 
 
                                 gifsCorrect()
@@ -160,8 +163,8 @@ body.addEventListener('click', event => {
                                     
                                 event.target.closest('.answer').style.backgroundColor = "green";
 
-                                // points++;
-                                // console.log(points);
+                                points++;
+                                console.log(points);
 
                                 gifsCorrect()
 
@@ -182,8 +185,8 @@ body.addEventListener('click', event => {
                                     
                                 event.target.closest('.answer').style.backgroundColor = "green";
 
-                                // points++;
-                                // console.log(points);
+                                points++;
+                                console.log(points);
 
                                 gifsCorrect()
 
