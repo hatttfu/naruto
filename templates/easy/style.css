@@ -264,8 +264,10 @@ a {
 }
 
 @media (max-width: 418px) {
+    .main {
+        padding: 50px 0;
+    }
     .modal {
-       
         width: 95vw;
         padding-left: .5rem;
         padding-right: .5rem;
