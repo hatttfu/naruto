@@ -14,22 +14,10 @@ const startingMessage = document.querySelector('.start-message'),
       modalNext = document.querySelector('.modal-next'),
       modal = document.querySelector('.modal'),
       noteText = document.querySelector('.note'),
+      results = document.querySelector('.results'),
+      pointsBlock = document.querySelector('.points'),
+      congratsBlock = document.querySelector('.congrats'),
       questionImg = document.querySelector('.info-img');
-
-let questionElements = [];
-
-// const 
-      
-//       results = document.querySelector('.results'),
-//       pointsBlock = document.querySelector('.points'),
-//       modal = document.querySelector('.modal'),
-//       body = document.getElementById('body'),
-//       reactionImg = document.querySelector('.reaction'),
-//       introText = document.querySelector('.intro-text'),
-//      
-
-
-
 
 let questionNumber = 9;
 let points = 0;
@@ -39,7 +27,27 @@ let points = 0;
 btnNext.addEventListener('click', nextBtnHandler)
 
 function nextBtnHandler() {
-    fillQuestion(questionNumber)
+    console.log(data.length);
+    if (questionNumber < data.length) {
+        fillQuestion(questionNumber)
+    } else {
+        showResults()
+    }
+}
+
+function showResults() {
+    console.log(points);
+    questionBlock.classList.add('hidden');
+    results.classList.remove('hidden');
+    pointsBlock.innerHTML = `Ты набрал очков: ${points} `;
+    if (points/data.length >= 0.8) {
+        congratsBlock.innerHTML = 'Блестящая работа! Отличные знания техник, героев и сюжета. Теперь вперед, на миссию А-ранга!'
+    } else if (points/data.length <= 0.4) {
+        congratsBlock.innerHTML = 'Видимо тебе нужно пересмотреть Наруто! Но не сдавайся, ведь даже, если захотеть, можно стать Хокаге!'
+    } else [
+        congratsBlock.innerHTML = 'Неплохая работа, но кое-что повторить не мешает. Но это потом, сейчас тебе пора на миссию В-ранга!'
+    ]
+
 }
 
 //getting data
@@ -48,6 +56,7 @@ function getData() {
     fetch('../../questions.json')
         .then(data => data.json())
         .then(data => {
+            console.log(data)
             saveData(data)
         })
     
@@ -107,6 +116,11 @@ function optionsHandler(event) {
             event.target.style.borderColor = 'red';
             event.target.style.borderWidth = '7px';
         } 
+        //btn to Посмотреть результаты
+        if (data.length == questionNumber + 1) {
+            btnNext.innerHTML = "Посмотреть результаты";
+            btnNext.addEventListener('click', showResults)
+        }
     }
 }
 
@@ -125,6 +139,8 @@ function gifsCorrect(src) {
         body.classList.remove('lock');
         questionNumber = questionNumber + 1;
     }
+
+    points = points + 1
 
 }
 

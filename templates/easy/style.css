@@ -144,6 +144,10 @@ button, a {
     border-radius: 50px;
 }
 
+.points {
+    text-decoration: underline;
+}
+
 .btn-next, .btn-start {
     /* background-color: #a19480; */
     /* font-size: 20px; */
@@ -152,6 +156,7 @@ button, a {
 
 .center {
     margin: 0 auto;
+    display: block;
 }
 
 .btn-next:active {
