@@ -19,7 +19,7 @@ const startingMessage = document.querySelector('.start-message'),
       congratsBlock = document.querySelector('.congrats'),
       questionImg = document.querySelector('.info-img');
 
-let questionNumber = 9;
+let questionNumber = 0;
 let points = 0;
 
 //clicking next
