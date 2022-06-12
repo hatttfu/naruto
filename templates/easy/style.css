@@ -97,25 +97,32 @@ a {
 
 .title {
     max-width: 30rem;
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
-.info, .options {
+.question, .options {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;;
 }
 
-.title, .options button {
-    margin-bottom: 5rem;
+.options button {
+    margin-bottom: 5rem
+}
+
+.options {
+    margin-top: 15px
+}
+
+.reaction {
+    width: 300px;
 }
 
 .question__img {
     text-align: center;
-}
-
-.info-img {
-    margin-bottom: 5rem;
+    padding: 15px 0;
 }
 
 .answer {
@@ -137,7 +144,7 @@ button, a {
     border-radius: 50px;
 }
 
-.btn-next {
+.btn-next, .btn-start {
     /* background-color: #a19480; */
     /* font-size: 20px; */
     text-align: center;
@@ -164,9 +171,9 @@ button:hover {
     margin: 0 auto;
 }
 
-.number, .title, .answer, .results {
+/* .number, .title, .answer, .results {
     display: none;
-}
+} */
 
 a {
     width: 242px;

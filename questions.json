@@ -1,0 +1,81 @@
+[
+    {
+        "id": "1",
+        "title": "любимое блюдо Наруто?",
+        "answers": [ "Рамен", "Карри", "Суши", "Данго"],
+        "isCorrect": 0
+    },
+    {
+        "id": "2",
+        "title": "как зовут королеву улиток?",
+        "answers": [ "Канкуро", "Кацую", "Шиккоцу"],
+        "isCorrect": 1
+    },
+    {
+        "id": "3",
+        "title": "кто является первым учителем Наруто?",
+        "answers": ["Дзирайя", "Какаси", "Ирука"],
+        "isCorrect": 2
+            
+    },
+    {
+        "id": "4",
+        "title": "кто был втором Хокаге?",
+        "answers": ["Хаширама", "Минато", "Тобирама"],
+        "isCorrect": 2
+           
+    },
+    {
+        "id": "5",
+        "title": "чей это глаз?",
+        "picture": "../../img/pictures/eye.png",
+        "answers": ["Саске", "Сая", "Гаары"],
+        "isCorrect": 2
+           
+    },
+    {
+        "id": "6",
+        "title": "какой знак закрыт на фото?",
+        "picture": "../../img/pictures/square.png",
+        "answerImg": "../../img/answers/square.png",
+        "answers": ["Деревни Скрытого Тумана","Деревни Скрытого Камня","Деревни Скрытого Водопада"],
+        "isCorrect": 2
+            
+    },
+    {
+        "id": "7",
+        "title": "кто спрятан на картинке?",
+        "picture": "../../img/pictures/secret.png",
+        "answerImg": "../../img/answers/answer7.png",
+        "answers": [ "Итачи","Забуза","Пейн"],
+        "isCorrect": 1
+            
+    },
+    {
+        "id": "8",
+        "title": "что скрывается за звездочкой?",
+        "picture": "../../img/pictures/star.png",
+        "answerImg": "../../img/answers/star.png",
+        "answers": ["Свинка","Собака","Книга"],
+        "isCorrect": 0
+            
+    },
+    {
+        "id": "9",
+        "title": "кто закрыт на фото?",
+        "picture": "../../img/pictures/hidden.png",
+        "answerImg": "../../img/answers/hidden.png",
+        "answers": ["Дейдара","Пейн","Тоби"],
+         "isCorrect": 1
+            
+    },
+    {
+        "id": "10",
+        "title": "кто это?",
+        "picture": "../../img/pictures/who.png",
+        "answerImg": "../../img/answers/who.jpg",
+        "answers": ["Суйгецу","Дейдара","Какаши"],
+        "isCorrect": 1
+            
+    }
+]
