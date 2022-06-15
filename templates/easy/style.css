@@ -118,6 +118,7 @@ a {
 
 .reaction {
     width: 300px;
+    max-height: 350px;
 }
 
 .question__img {
