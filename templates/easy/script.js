@@ -3,6 +3,7 @@
 let data = null;
 
 const startingMessage = document.querySelector('.start-message'),
+      html = document.documentElement,
       btnStart = document.querySelector('.btn-start'),
       questionBlock = document.querySelector('.question'),
       number = document.querySelector('.number'),
@@ -27,7 +28,8 @@ let points = 0;
 btnNext.addEventListener('click', nextBtnHandler)
 
 function nextBtnHandler() {
-    console.log(data.length);
+    window.scrollTo(pageYOffset, 0);
+    html.style.scrollBehavior = "smooth";
     if (questionNumber < data.length) {
         fillQuestion(questionNumber)
     } else {
@@ -39,7 +41,7 @@ function showResults() {
     console.log(points);
     questionBlock.classList.add('hidden');
     results.classList.remove('hidden');
-    pointsBlock.innerHTML = `Ты набрал очков: ${points} `;
+    pointsBlock.innerHTML = `${points}/${data.length} `;
     if (points/data.length >= 0.8) {
         congratsBlock.innerHTML = 'Блестящая работа! Отличные знания техник, героев и сюжета. Теперь вперед, на миссию А-ранга!'
     } else if (points/data.length <= 0.4) {
@@ -105,17 +107,22 @@ function fillQuestion(questionNumber) {
 function optionsHandler(event) {
     let {isCorrect} = data[questionNumber];
     let answerBtns = Array.from(options.children);
-    answerBtns.map(answerBtn => answerBtn.style.pointerEvents = "none");
     if (event.path[0].tagName == 'BUTTON') {
+        //запрет на клик по кнопкам
+        answerBtns.map(answerBtn => answerBtn.style.pointerEvents = "none");
+        //стилизуем кнопочки
         answerBtns[isCorrect].style.borderColor = 'green';
         answerBtns[isCorrect].style.borderWidth = '7px';
+
+        //вывод гифок
         if (answerBtns.indexOf(event.target) == isCorrect) {
-            gifsCorrect(data[questionNumber]['answerImg'] || "../../gifs/correct.gif"); 
+            showGifs(true) 
         } else {
-            gifsIncorrect(data[questionNumber]['answerImg'] || "../../gifs/incorrect.gif");
+            showGifs();
             event.target.style.borderColor = 'red';
             event.target.style.borderWidth = '7px';
         } 
+
         //btn to Посмотреть результаты
         if (data.length == questionNumber + 1) {
             btnNext.innerHTML = "Посмотреть результаты";
@@ -126,13 +133,15 @@ function optionsHandler(event) {
 
 //gifs
 
-function gifsCorrect(src) {
+function showGifs(isCorrect=false) {
+    let src;
+    isCorrect ? src = "../../gifs/correct.gif" : src = "../../gifs/incorrect.gif";
     body.classList.add('lock');
     modal.classList.remove('hidden');
-    modal.style.backgroundColor = "#2ecc71";
+    modal.style.backgroundColor = `${isCorrect ? "#2ecc71" : "#e74c3c"}`;
     
-    reactionImg.src = src;
-    noteText.innerHTML = "Верно!";
+    reactionImg.src = data[questionNumber]['answerImg'] || src;
+    noteText.innerHTML = `${isCorrect ? "Верно!" : "Неверно!"}`;
 
     modalNext.onclick = function() {
         modal.classList.add('hidden');
@@ -140,23 +149,40 @@ function gifsCorrect(src) {
         questionNumber = questionNumber + 1;
     }
 
-    points = points + 1
-
+    if (isCorrect) { points = points + 1 }
 }
 
-function gifsIncorrect(src) {
-    body.classList.add('lock');
-    modal.classList.remove('hidden');
-    modal.style.backgroundColor = "#e74c3c";
-    noteText.innerHTML = "Неверно!";
-    reactionImg.src = src;
-    modalNext.onclick = function() {
-        modal.classList.add('hidden');
-        body.classList.remove('lock');
-        questionNumber = questionNumber + 1;
-    }
+// function gifsCorrect(src) {
+//     body.classList.add('lock');
+//     modal.classList.remove('hidden');
+//     modal.style.backgroundColor = "#2ecc71";
+    
+//     reactionImg.src = src;
+//     noteText.innerHTML = "Верно!";
 
-}
+//     modalNext.onclick = function() {
+//         modal.classList.add('hidden');
+//         body.classList.remove('lock');
+//         questionNumber = questionNumber + 1;
+//     }
+
+//     points = points + 1
+
+// }
+
+// function gifsIncorrect(src) {
+//     body.classList.add('lock');
+//     modal.classList.remove('hidden');
+//     modal.style.backgroundColor = "#e74c3c";
+//     noteText.innerHTML = "Неверно!";
+//     reactionImg.src = src;
+//     modalNext.onclick = function() {
+//         modal.classList.add('hidden');
+//         body.classList.remove('lock');
+//         questionNumber = questionNumber + 1;
+//     }
+
+// }
 
 function srcChange(src) {
     reactionImg.src = src;

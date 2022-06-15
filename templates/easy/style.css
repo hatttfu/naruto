@@ -192,7 +192,7 @@ a {
 /* modal */ 
 
 .modal {
-    position: absolute;
+    position: fixed;
     top: 3rem;
     left: 0;
     right: 0;
@@ -210,6 +210,20 @@ a {
     align-items: center;
 }
 
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.links a {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.answer, .btn-next {
+    font-size: 28px;
+}
+
 .modal button {
     margin-top: 3rem;
     text-align: center;
@@ -218,7 +232,14 @@ a {
 .lock {
     background: #000;
     opacity: 0.75;
+    /* overflow: hidden; */
 }
+
+.results {
+    width: 80%;
+    /* background-color: #5279ca ; */
+    margin: 0 auto; 
+} 
 
 .hidden {
     display: none;
@@ -233,6 +254,12 @@ a {
     font-size: 26px;
     text-align: center;
     line-height: 1.2em;
+}
+
+.congrats {
+    font-size: 28px;
+    padding: 0 3rem;
+    margin-bottom: 2.5rem;
 }
 
 @media (max-width: 912px) {
